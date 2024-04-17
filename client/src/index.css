@@ -1,0 +1,26 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* default css classes used througout the whole project */
+
+input[type="text"],input[type="password"],
+input[type="email"],input[type="number"],
+input[type="tel"],
+textarea{
+  @apply w-full border my-2 py-2 px-3 rounded-xl;
+}
+textarea{
+  height: 150px;
+}
+button{
+  @apply bg-gray-300;
+}
+button.primary{
+  background-color: #7badd9;
+  @apply bg-primary p-2 w-full text-white rounded-xl;
+}
+
+button.delete{
+  background-color: #7badd9;
+  @apply bg-red-500 p-2 w-full text-white rounded-xl;
+}

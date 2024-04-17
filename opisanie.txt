@@ -1,0 +1,89 @@
+!! za restart - yarn dev
+
+!! to start api - npm start
+
+!!! If i change internet server i should check the mongo db server
+
+09.12.23-totorial finished!!!
+
+TO DO:
+done!!! da si opravq headera zashtoto ne e na celiq ekran
+done!!!!!! da si napravq validaciq na vsichkoo
+AKO IMA VREME da napraq users da mogat da razglejdat na drug user profila
+done !!! da si naprawq footer
+!! da opravq snimkite vuv view all da sa edin razmer
+done !! da dorazwiq account pagea
+done !!! da dobavq ostanalite poleta vuv place pagea
+done !!! ako nqmash acount i natisnesh book this place da te redirectva kum login/register
+done !!! da naprawq da moje da se iztriwat dobaweni lokacii i napraweni bookings
+done !!! da pokaja vsichki neshta na place pagea
+done !!! da naprawq placovete da sa na mnogo stranici
+done !!! da sloja background na login i register/?
+done !!! like button - da napravq da ne moje da se likeva poveche ot vednuj; da ima surce koeto da stava zapulneno kogato se likne mqsto; da napravq funkcionalnot za premahvane na like
+  //like butona raboti kato zapazva idto na haresanoto mqsto v nova kolekciq 
+  // v liked page e vizualiziran lik do informaciqta za mqstoto
+done!!! da preweda saita
+!!! filtur za cena
+done !!! da napravq da izprashta emaili
+done !!! da napravq da moje da se smenq emaila
+done !!! da izliza greshka ako emial e nevaliden
+kum gornoto !!! da napravq confirm account zashtoto emaila ne moje da izprashta na fake emaili
+done !!! da si opravq single booking page
+
+!? logo text font Merienda
+gebso05@abv.bg testtest
+ivan@gmail.com ivan
+gebso05@gmail.com testtest
+
+1 svalih yarn - npm install -g yarn
+2 suzdadoh vite-react app - yarn global add create-vite
+3 svalih tailwindcss - yarn add tailwindcss
+4 dobavih react router za logina - yarn add react-router-dom
+5 dobavih express v api papkata - yarn add express
+6 dobavih nodemon na lokalno nivo - yarn add --dev nodemon
+7 dobavih axios za po lesno izprashtane na zaqwki v client papkata - yarn add axios
+8 dobavih cors za po lesna komunicaciq mejdu api i client - yarn add cors
+9 dobavih mongoose kato baza danni v api papkata - yarn add mongoose
+10 dobavih dotenv za po lesno izpolzvane na bazata - yarn add dotenv
+11 dobavih bchryptjs za criptirane na parolata - yarn add bcryptjs
+12 dobavih jsonwebtoken za biskvitkata v api papkata - yarn add jsonwebtoken
+13 dobavih cookie-parser za suzdavane na middleware za biskvitkata v api papkata - yarn add cookie-parser
+14 dobavih image-downloader v api papkata za svalqne na snimkite kacheni chrez link - yarn add image-downloader
+15 dobavih multer v api papkata za pomosht pri kchvaneto na snimki ot komputar - yarn add multer
+16 dobavih date-fns za izpolzvane na funkcii za datite - yarn add date-fns
+17 dobavih nodemailer v api papkata za izprashtane na emaili - npm install nodemailer
+18 dobavih i18new globalno za prevod na saita - yarn add i18next react-i18next
+19 dobavih sweetalert2 za personalizirani alert boxove - yarn add sweetalert2
+20 dobavih react-datepicker za po lesna obrabotka na datite za booking - yarn add react-datepicker
+21 dobavih aws za kachvane na snimkite za hostwane - yarn add @aws-sdk/client-s3
+22 dobavih mime-types za kachwane na snimki chrez link - yarn add mime-types
+
+
+const photosMiddleware = multer({ dest: "uploads/" });
+//end point for photos uploaded by file
+app.post("/upload", photosMiddleware.array("photos", 100), (req, res) => {
+  const uploadedFiles = [];
+  for (let i = 0; i < req.files.length; i++) {
+    //loops through the files
+    const { path, originalname } = req.files[i]; //gets the path and the original name of the file
+    const parts = originalname.split("."); //splits the name of the file
+    const ext = parts[parts.length - 1]; //gets the extension of the file
+    const newPath = path + "." + ext; //creates a new path for the file
+    fs.renameSync(path, newPath); //renames the file
+    uploadedFiles.push(newPath.replace("uploads\\", "")); //pushes the new path to the array
+  }
+  res.json(uploadedFiles); //returns the array
+});
+
+nqma admin - obqsnq
+
+izpolzvani iztochnici
+https://undraw.co/search
+https://tailwindflex.com/@anonymous/responsive-registration-form-2
+https://tailwindcss.com/docs/guides/vite
+https://heroicons.com
+https://coolors.co/fcecc9-fcb0b3-f93943-7eb2dd-7badd9-77a8d4-709dcb-6188b8-445e93
+https://bg.airbnb.com
+https://chat.openai.com/c/513e2526-d9fa-4610-bc4c-ed72219217c6
+https://flowbite.com/blocks/
+

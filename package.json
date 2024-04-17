@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.525.0",
+    "i18next": "^23.7.16",
+    "mime-types": "^2.1.35",
+    "react-i18next": "^14.0.0"
+  }
+}
